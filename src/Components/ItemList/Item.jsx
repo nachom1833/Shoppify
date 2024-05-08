@@ -3,8 +3,6 @@ import useCounter from "../../hooks/useCounter";
 import ItemCounter from "../ItemCounter/ItemCounter";
 import "../../mocks/mockAsync";
 import { useParams } from "react-router-dom";
-import { useEffect } from "react";
-
 
 export default function Item({ item }) {
   const { counter, increment, decrement } = useCounter(0);
@@ -12,14 +10,9 @@ export default function Item({ item }) {
     console.log("nombreDeItem: ", nombreDeItem);
     console.log("cantidadaLlevar: ", cantidadaLlevar);
   };
-useEffect(()=>{
-window.addEventListener("onClick",()=>{
 
-
-})
-},[])
   return (
-    <div className="item-container" onClick={itemDetail}>
+    <div className="item-container" >
         <div className="item_img-container">
       <img className="item_img" src={item.image} alt={item.title} />
       </div>
