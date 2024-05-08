@@ -1,0 +1,32 @@
+.Item-counter_Container{
+    display: flex;
+    flex-direction: row;
+width: 100%;
+height: 10%;
+align-items: center;
+border: 2px solid rgba(110, 110, 110, 0.585);
+border-radius: 7px;
+}
+.Item-counter-count_Container{
+    display: flex;
+width: 100%;
+height: 100%;
+}
+.Item-counter-button{
+width: 33%;
+height: 100%;
+
+}
+.Item-counter-span{
+    
+    width: 34%;
+    height: auto;
+    font-weight: 600;
+ display: flex;
+ justify-content: center;
+ align-items: center;
+ font-size: x-large;
+}
+    
+    
+

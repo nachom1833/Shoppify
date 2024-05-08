@@ -1,0 +1,9 @@
+.NavBar{
+    display: flex;
+    align-content: space-between;
+    align-items: center;
+    margin-right: 3rem;
+
+  }
+
+

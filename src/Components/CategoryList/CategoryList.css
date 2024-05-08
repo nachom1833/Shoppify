@@ -1,0 +1,41 @@
+
+.CategoryList{
+    display: flex;
+    border-radius: 100%;
+    flex-wrap: nowrap;
+    list-style: none;
+    margin: auto;
+    height: 100%;
+  }
+
+ .CategoryList li a:hover{
+  background-color: #000000;
+  color: #ffffff;
+  }
+
+ .CategoryList li a{
+  text-decoration: none;
+  padding: 10px;
+  margin: 10px;
+  font-size: 1.5rem;
+  border-radius: 5px;
+  color: #000000;
+ }
+  .CategoryList li a:active{
+    color: #ffffff;
+    background-color: #000000;
+  }
+
+  Span.CantidadDeProductos{
+   border-radius: 5px;
+   margin: 5px;
+    padding: auto;
+
+
+  }
+
+  .activeLink{
+
+    background-color: #000000;
+    color: #ffffff!important ;
+  }

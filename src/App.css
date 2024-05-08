@@ -3,72 +3,7 @@ margin: 0%;
 padding: 0%;
 
 
-
 }
-.header{
-height: 10vh;
-  display: flex;
-  align-content: space-between;
-  justify-content: space-between;
-  flex-wrap: nowrap;
-  background-color: gainsboro;
-  margin: 0%;
-  
-  }
-  
-  .NavBar{
-    display: flex;
-    align-content: space-between;
-    align-items: center;
-  }
-
-  .CategoryList{
-    display: flex;
-    border-radius: 100%;
-    flex-wrap: nowrap;
-    list-style: none;
-    margin: auto;
-    height: 100%;
-  }
-
- .CategoryList li a:hover{
-  background-color: #000000;
-  color: #ffffff;
-  }
-
- .CategoryList li a{
-  text-decoration: none;
-  padding: 10px;
-  margin: 10px;
-  font-size: 1.5rem;
-  border-radius: 5px;
-  color: #000000;
- }
-  .CategoryList li a:active{
-    color: #ffffff;
-    background-color: #000000;
-  }
-
-  Span.CantidadDeProductos{
-   border-radius: 5px;
-   margin: 5px;
-    padding: auto;
-
-
-  }
-
-  .CartWidget{
-   border-radius: 5px;
-   margin: 5px;
-    padding: auto;
-  }
-
- .Brand{
-  margin: 10px;
-  display: flex;
-  align-items: center;
-  flex-wrap: nowrap;
- }
 
 
 

@@ -1,18 +1,26 @@
 import "./App.css";
-import Brand from "./Components/Brand";
-import ItemListContainer from "./Components/ItemListContainer";
-import Navbar from "./Components/nav_bar";
+import ItemDetailContainer from "./Components/ItemDetailContainer/ItemDetailContainer";
+import ItemListContainer from "./Components/ItemListContainer/ItemListContainer";
+import Layout from "./Components/Layout/Layout";
+import {BrowserRouter,Routes, Route } from "react-router-dom";
+
 
 function App() {
-  return (
-    <>
-      <header className="header">
-        <Brand />
+  return (//layout deberia encerrar todo y no solo el header y el footer 
+  <BrowserRouter>
+   <Layout>
+<Routes>
+<Route path="/"element={<ItemListContainer Bienvenida={"Bienvenidos"}/>}/>
+<Route path="/products"element={<ItemListContainer Bienvenida={"Bienvenidos"}/>}/>
+<Route path="/category/:category"element={<ItemListContainer Bienvenida={"Bienvenidos"}/>}/>
+<Route path="/item/:id"element={<ItemDetailContainer />}/>
+<Route path="*"element={<h1>Not Found</h1>}/>
 
-        <Navbar />
-      </header>
-      <ItemListContainer Bienvenida={"Bienvenidos a Shoppify"} />
-    </>
+</Routes>
+
+
+</Layout>
+</BrowserRouter>
   );
 }
 

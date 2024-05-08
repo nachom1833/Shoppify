@@ -1,6 +1,6 @@
-
-import CartWidget from "./CartWidget";
-import CategoryList from "./CategoryList";
+import "./nav_bar.css";
+import CartWidget from "../Cart/CartWidget";
+import CategoryList from "../CategoryList/CategoryList";
 
 
 

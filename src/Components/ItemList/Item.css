@@ -1,0 +1,90 @@
+
+.Itemlist{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    width: 80vw;
+    margin: 0 auto;
+    margin-top: 1rem;
+    gap: 2vw;
+}
+
+.item-container
+{
+    display: flex;
+    height: 60vh;
+    width: 17vw;
+    flex-wrap: wrap;
+    flex-direction: row;
+    align-content: center;
+    justify-content: space-around;
+    align-items: stretch;
+    gap: 2%;
+    margin: 1rem;
+    padding: 3%;
+    border: 1px solid #ccc;
+    box-shadow: 0 0 10px rgba(0,0,0,0.2);
+    transition: all 0.2s;
+    border-radius: 1rem;
+    &:hover
+    {
+        transform: scale(1.05);
+        }
+
+
+}
+.item_img-container
+{
+    position: relative;
+    height: 35%;
+    width: 70%;
+   
+    margin-bottom: 10%;
+}
+
+.item_img
+{
+    width: 100%;
+    height: 100%;
+  
+
+}
+.item_title
+{
+    width: max-content;
+    height: 15%;
+    font-size: 100%;
+    font-weight: bold;
+    
+    text-align: center;
+    color: #333;
+    text-transform: capitalize;
+    overflow: hidden;
+    text-overflow: ellipsis;
+
+}
+.item_description
+{
+    width: max-content;
+    height: 15%;
+    font-size: 70%;
+    color: #666;
+    text-align: center;
+    margin-bottom: 0.5rem;
+    text-transform: capitalize;
+    overflow: overlay;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+
+}
+.item_price
+{
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #333;
+    text-align: center;
+    margin-bottom: 0.5rem;
+
+}
