@@ -9,7 +9,7 @@ export default function Footer() {
         borderTop: "1px solid #ccc",
       }}
     >
-      <p>© 2021 Shoppy. All rights reserved.</p>
+      <p>© 2021 Shopp. All rights reserved.</p>
     </div>
   );
 }

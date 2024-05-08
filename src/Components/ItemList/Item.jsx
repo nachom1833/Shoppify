@@ -12,9 +12,9 @@ export default function Item({ item }) {
   };
 
   return (
-    <div className="item-container" >
-        <div className="item_img-container">
-      <img className="item_img" src={item.image} alt={item.title} />
+    <div className="item-container">
+      <div className="item_img-container">
+        <img className="item_img" src={item.image} alt={item.title} />
       </div>
       <h2 className="item_title">{item.title}</h2>
       <p className="item_description">{item.description}</p>
@@ -25,7 +25,7 @@ export default function Item({ item }) {
         increment={increment}
         decrement={decrement}
       />
-       <div className="item--cart__container">
+      <div className="item--cart__container">
         <button
           className="item--cart__button"
           onClick={() => onAdd(item, count)}
