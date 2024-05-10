@@ -9,7 +9,6 @@ function CategoryList()  {
       <li><NavLink to={"/category/mensClothing"} className={({isActive})=>isActive?"activeLink":""} >Men's clothing</NavLink></li>
       <li><NavLink to={"/category/jewelery"} className={({isActive})=>isActive?"activeLink":""} >Jewelery</NavLink></li>
       <li><NavLink to={"/category/electronics"} className={({isActive})=>isActive?"activeLink":""} >Electronics</NavLink></li> 
-      <li><NavLink to={"/item/1"} className={({isActive})=>isActive?"activeLink":""} >Product 1</NavLink></li>
     </ul>
   </div>
   );

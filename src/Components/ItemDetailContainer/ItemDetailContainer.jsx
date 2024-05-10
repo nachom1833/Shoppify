@@ -12,6 +12,11 @@ export default function ItemDetailContainer() {
   if (isLoading) {
     return <h1>Cargando...</h1>;
   }
+  const onAdd = (nombreDeItem, cantidadaLlevar) => {
+    console.log("nombreDeItem: ", nombreDeItem);
+    console.log("cantidadaLlevar: ", cantidadaLlevar);
+  };
+ 
   return (
     <div className="item-container">
       <div className="item_img-container">
@@ -26,6 +31,14 @@ export default function ItemDetailContainer() {
         increment={increment}
         decrement={decrement}
       />
+       <div className="item--cart__container">
+        <button
+          className="item--cart__button"
+          onClick={() => onAdd(item, count)}
+        >
+          Add to cart
+        </button>
+      </div>
     </div>
   );
 }
