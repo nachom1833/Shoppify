@@ -20,20 +20,7 @@ export default function Item({ item }) {
       <h2 className="item_title">{item.title}</h2>
       <p className="item_description">{item.description}</p>
       <p className="item_price">${item.price}</p>
-      <ItemCounter
-        stock={item.stock}
-        counter={counter}
-        increment={increment}
-        decrement={decrement}
-      />
-      <div className="item--cart__container">
-        <button
-          className="item--cart__button"
-          onClick={() => onAdd(item, count)}
-        >
-          Add to cart
-        </button>
-      </div>
+      
     </div>
   );
 }
