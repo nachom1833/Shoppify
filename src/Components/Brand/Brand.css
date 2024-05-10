@@ -3,5 +3,7 @@
     display: flex;
     align-items: center;
     flex-wrap: nowrap;
+    text-decoration: none;
+    color: black;
    }
    
