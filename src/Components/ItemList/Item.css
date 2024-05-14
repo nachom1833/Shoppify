@@ -38,8 +38,8 @@
     position: relative;
     height: 35%;
     width: 70%;
+   margin-bottom: 4%;
    
-    margin-bottom: 10%;
 }
 
 .item_img
@@ -66,22 +66,22 @@
 .item_description
 {
     width: max-content;
-    height: 15%;
+    height: 25%;
     font-size: 70%;
     color: #666;
     text-align: center;
     margin-bottom: 0.5rem;
     text-transform: capitalize;
-    overflow: overlay;
+    overflow: hidden;
     text-overflow: ellipsis;
     display: -webkit-box;
     -webkit-line-clamp: 2;
     -webkit-box-orient: vertical;
-
+    
 }
 .item_price
 {
-    font-size: 1.2rem;
+    size: 15%;
     font-weight: bold;
     color: #333;
     text-align: center;

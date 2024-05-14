@@ -3,6 +3,7 @@ import ItemCounter from "../ItemCounter/ItemCounter";
 import "../../mocks/mockAsync";
 import { useParams } from "react-router-dom";
 import useProduct from "../../hooks/useProduct";
+import "./ItemDetailContainer.css";
 
 export default function ItemDetailContainer() {
   const { counter, increment, decrement } = useCounter(0);
@@ -12,11 +13,11 @@ export default function ItemDetailContainer() {
   if (isLoading) {
     return <h1>Cargando...</h1>;
   }
-  const onAdd = (nombreDeItem, cantidadaLlevar) => {
-    console.log("nombreDeItem: ", nombreDeItem);
-    console.log("cantidadaLlevar: ", cantidadaLlevar);
+  const onAdd = (name, amount) => {
+    console.log("Name: ", name);
+    console.log("Amount: ", amount);
   };
- 
+
   return (
     <div className="item-container">
       <div className="item_img-container">
@@ -31,10 +32,10 @@ export default function ItemDetailContainer() {
         increment={increment}
         decrement={decrement}
       />
-       <div className="item--cart__container">
+      <div className="item--cart__container">
         <button
           className="item--cart__button"
-          onClick={() => onAdd(item, count)}
+          onClick={() => onAdd(product.title, counter)}
         >
           Add to cart
         </button>

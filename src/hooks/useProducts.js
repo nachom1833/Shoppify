@@ -9,6 +9,6 @@ export default function useProducts() {
     getProducts()
       .then((data) => setProducts(data))
       .finally(() => setLoading(false));
-  }, );
+  },[products] );
   return { products, isLoading };
 }

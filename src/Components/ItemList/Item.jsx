@@ -1,15 +1,8 @@
 import "./Item.css";
-import useCounter from "../../hooks/useCounter";
-import ItemCounter from "../ItemCounter/ItemCounter";
 import "../../mocks/mockAsync";
 import { NavLink, unstable_HistoryRouter, useParams } from "react-router-dom";
 
 export default function Item({ item }) {
-  const { counter, increment, decrement } = useCounter(0);
-  const onAdd = (nombreDeItem, cantidadaLlevar) => {
-    console.log("nombreDeItem: ", nombreDeItem);
-    console.log("cantidadaLlevar: ", cantidadaLlevar);
-  };
   return (
     <div className="item-container">
       <div className="item_img-container">
