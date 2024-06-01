@@ -10,7 +10,7 @@ import {
 } from "firebase/firestore";
 import CartDetails from "../Cart/CartDetails";
 import useBuyer from "../../hooks/useBuyer";
-import "./checkOutContainer.css"
+import "./checkOutContainer.css";
 
 export default function CheckoutContainer() {
   const { cart, clearCart, cartTotal } = useContext(CartContext);
@@ -19,11 +19,16 @@ export default function CheckoutContainer() {
   const handleSubmit = async (e) => {
     e.preventDefault();
 
+    if (!buyer.name || !buyer.email || !buyer.lastName) {
+      alert("Por favor, completa todos los campos.");
+      return;
+    }
     const order = {
       buyer,
       cart,
       cartTotal,
-    };
+      date: new Date().toISOString()
+    } ;
 
     const db = getFirestore();
 
@@ -51,11 +56,14 @@ export default function CheckoutContainer() {
         await updateDoc(productRef, { stock: newStock });
       }
     });
+
   };
+
+
 
   return (
     <div className="checkout-container">
-      <form onSubmit={handleSubmit} className="checkout-form" action="/">
+      <form onSubmit={handleSubmit} className="checkout-form" >
         <div className="form-group">
           <label className="form-label">Nombre</label>
           <input
@@ -90,7 +98,11 @@ export default function CheckoutContainer() {
           />
         </div>
         <CartDetails cart={cart} cartTotal={cartTotal} />
-        <button className="checkout-button" type="submit">
+        <button
+          className="checkout-button"
+          type="submit"
+          {...(cart.length === 0 ? { disabled: true } : {})}
+        >
           Comprar
         </button>
       </form>
