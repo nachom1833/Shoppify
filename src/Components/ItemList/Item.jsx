@@ -1,6 +1,5 @@
 import "./Item.css";
-import "../../mocks/mockAsync";
-import { NavLink, unstable_HistoryRouter, useParams } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 
 export default function Item({ item }) {
   return (

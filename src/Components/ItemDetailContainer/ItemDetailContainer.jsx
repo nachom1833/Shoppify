@@ -1,28 +1,29 @@
 import useCounter from "../../hooks/useCounter";
 import ItemCounter from "../ItemCounter/ItemCounter";
-import "../../mocks/mockAsync";
 import { useParams } from "react-router-dom";
 import useProduct from "../../hooks/useProduct";
 import "./ItemDetailContainer.css";
+import CartContext from "../Cart/CartContext";
+import { useContext } from "react";
 
 export default function ItemDetailContainer() {
-  const { counter, increment, decrement } = useCounter(0);
+  const { counter, increment, decrement,restart } = useCounter(0);
   const { id } = useParams();
-
-  const { product, isLoading } = useProduct(parseInt(id));
+  const { product, isLoading } = useProduct(id);
+  const { addToCart } = useContext(CartContext);
   if (isLoading) {
     return <h1>Cargando...</h1>;
   }
-  const onAdd = (name, amount) => {
-    console.log("Name: ", name);
-    console.log("Amount: ", amount);
-  };
+  const onAdd = () => {
+    addToCart(product, counter);
+    restart();
+  }
 
   return (
     <div className="item-container">
-      <div className="item_img-container">
+       <div className="item_img-container">
         <img className="item_img" src={product.image} alt={product.title} />
-      </div>
+      </div> 
       <h2 className="item_title">{product.title}</h2>
       <p className="item_description">{product.description}</p>
       <p className="item_price">${product.price}</p>
@@ -35,7 +36,8 @@ export default function ItemDetailContainer() {
       <div className="item--cart__container">
         <button
           className="item--cart__button"
-          onClick={() => onAdd(product.title, counter)}
+          onClick={() => onAdd()}
+          disabled={counter === 0}
         >
           Add to cart
         </button>

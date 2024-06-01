@@ -1,41 +1,64 @@
 
-.CategoryList{
-    display: flex;
-    border-radius: 100%;
-    flex-wrap: nowrap;
-    list-style: none;
-    margin: auto;
-    height: 100%;
-  }
+.CategoryList {
+  display: flex;
+  border-radius: 100%;
+  flex-wrap: nowrap;
+  list-style: none;
+  margin: auto;
+  height: 100%;
+  justify-content: center; 
+  align-items: center; 
+}
 
- .CategoryList li a:hover{
-  background-color: #000000;
-  color: #ffffff;
-  }
+.CategoryList li {
+  display: flex;
+  align-items: center;
+}
 
- .CategoryList li a{
+.CategoryList li a {
   text-decoration: none;
   padding: 10px;
   margin: 10px;
   font-size: 1.5rem;
   border-radius: 5px;
   color: #000000;
- }
-  .CategoryList li a:active{
-    color: #ffffff;
-    background-color: #000000;
+  transition: background-color 0.3s, color 0.3s; 
+}
+
+.CategoryList li a:hover {
+  background-color: #000000;
+  color: #ffffff;
+}
+
+.CategoryList li a:active {
+  color: #ffffff;
+  background-color: #000000;
+}
+
+.activeLink {
+  background-color: #000000;
+  color: #ffffff !important;
+}
+
+.Span.CantidadDeProductos {
+  border-radius: 5px;
+  margin: 5px;
+  padding: auto;
+}
+
+
+@media (min-width: 600px) {
+  .CategoryList {
+    flex-wrap: wrap;
   }
 
-  Span.CantidadDeProductos{
-   border-radius: 5px;
-   margin: 5px;
-    padding: auto;
-
-
+  .CategoryList li a {
+    font-size: 1.2rem;
   }
+}
 
-  .activeLink{
-
-    background-color: #000000;
-    color: #ffffff!important ;
+@media (min-width: 900px) {
+  .CategoryList li a {
+    font-size: 1.5rem;
   }
+}

@@ -1,8 +1,26 @@
-# React + Vite
+# Shopp
+---
+### Este proyecto es un e-commerce de React creada con Vite.
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
-Currently, two official plugins are available:
+## Requisitos
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Ensure you have Node.js installed. You can download it from [nodejs.org](https://nodejs.org/).
+
+## Instalacion
+
+1. Clonar el repositorio:
+   ```bash
+   git clone https://github.com/nachom1833/Shoppify
+
+2. Navegar al directorio:
+    cd Shoppify
+
+3. Instalar las dependencias:
+npm install
+
+4. Arrancar el servidor:
+npm run dev
+
+## Colaboradores
+- [Ignacio Orco Barberis](https://github.com/nachom1833)

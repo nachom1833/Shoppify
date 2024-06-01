@@ -1,0 +1,39 @@
+.checkout-container {
+    padding: 20px;
+    background-color: #f9f9f9;
+  }
+  
+  .checkout-form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .form-group {
+    margin-bottom: 15px;
+  }
+  
+  .form-label {
+    margin-bottom: 5px;
+    font-weight: bold;
+  }
+  
+  .form-input {
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    width: 100%;
+  }
+  
+  .checkout-button {
+    padding: 10px 15px;
+    background-color: #1890ff;
+    color: white;
+    border: none;
+    cursor: pointer;
+    margin-top: 10px;
+  }
+  
+  .checkout-button:hover {
+    background-color: #40a9ff;
+  }
+  

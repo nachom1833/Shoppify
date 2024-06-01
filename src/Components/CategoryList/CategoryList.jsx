@@ -6,20 +6,20 @@ function CategoryList() {
       <ul className="CategoryList">
         <li>
           <NavLink
-            to={"/"}
+            to={""}
             className={({ isActive }) => (isActive ? "activeLink" : "")}
           >
             Home
           </NavLink>
         </li>
-        <li>
+        {/* <li>
           <NavLink
-            to={"/products"}
+            to={"products"}
             className={({ isActive }) => (isActive ? "activeLink" : "")}
           >
             Products
           </NavLink>
-        </li>
+        </li> */}
         <li>
           <NavLink
             to={"/category/mensClothing"}

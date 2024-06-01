@@ -9,5 +9,9 @@ export default function useCounter(initialState = 0) {
   const decrement = () => {
     setCounter(counter - 1);
   };
-  return { counter, increment, decrement };
+
+  const restart =()=>{
+    setCounter(initialState);
+  }
+  return { counter, increment, decrement , restart };
 }
